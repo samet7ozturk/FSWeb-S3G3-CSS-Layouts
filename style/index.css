@@ -3,37 +3,14 @@
 }
 
 .govde {
-  border: solid 3px;
-}
-
-#flex-header {
-  display: flex;
-  justify-content: center;
-  height: 50px;
-}
-
-#flex-header > div {
-  display: flex;
-  border: solid;
-  padding-left: 45vw;
-  padding-right: 45vw;
-  overflow: hidden;
-}
-
-.baslik > h2 {
-  display: flex;
-  height: 100%;
-  white-space: nowrap;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+  border: solid 3px black;
+  border-style: groove;
 }
 
 footer {
   background-color: rgb(213, 210, 210);
   padding: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 nav {
@@ -66,29 +43,56 @@ h1 {
   width: 100%;
 }
 
+.yazi1 {
+  text-align: center;
+}
+
+.galeri {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2%;
+  margin-top: 10px;
+}
+
+.img2 {
+  display: flex;
+  align-items: flex-end;
+}
+
+.img2 > img {
+  display: flex;
+}
+
 .yazi2 {
   display: flex;
+  flex-wrap: wrap;
   width: 25%;
-  height: 500px;
+  height: 400px;
   justify-content: space-around;
   align-items: center;
   min-width: 200px;
 }
 
-.image {
-  object-fit: fill;
-  display: flex;
-  width: 70%;
-  min-width: 800px;
-  align-items: center;
-  justify-content: space-around;
-}
-.galeri {
-  display: flex;
-  height: 500px;
-  flex-wrap: wrap;
+@media (min-width: 500px) and (max-width: 800px) {
+  .img1 {
+    object-fit: fill;
+    height: 80%;
+    width: 100%;
+  }
 }
 
-.yazi1 {
-  text-align: center;
+@media (max-width: 500px) {
+  .img1 {
+    object-fit: fill;
+    height: 60%;
+    width: 100%;
+  }
+  .galeri {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 10px;
+  }
 }
